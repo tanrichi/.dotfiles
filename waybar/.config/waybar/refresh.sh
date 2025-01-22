@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Define file_exists function
 file_exists() {
   if [ -e "$1" ]; then
     return 0 # File exists
@@ -16,8 +15,7 @@ for _prs in "${_ps[@]}"; do
   fi
 done
 
-sleep 0.3
 #Restart waybar
+sleep 0.3
 waybar &
-
 exit 0

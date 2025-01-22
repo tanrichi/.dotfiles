@@ -1,0 +1,20 @@
+{
+  "include": [
+    "$HOME/.config/waybar/group-modules.jsonc",
+    "$HOME/.config/waybar/custom-modules.jsonc",
+    "$HOME/.config/waybar/modules.jsonc",
+  ],
+  "layer": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "fixed-center": true,
+  "ipc": true,
+  "reload_style_on_change": true,
+
+  "modules-left": ["hyprland/workspaces#custom", "tray", "custom/weather"],
+
+  "modules-center": ["clock"],
+
+  "modules-right": ["custom/keyboard", "group/mobo_drawer", "group/status"],
+}

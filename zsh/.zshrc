@@ -1,6 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="xiong-chiamiov-plus"
@@ -15,7 +12,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# export FZF_DEFAULT_OPTS='--height ~100% --border double --border-label="fzf"'
 export FZF_DEFAULT_OPTS=" \
 --height ~100% --border rounded --border-label=\"fzf\"  \
 --preview 'bat --style=numbers --color=always --line-range :500 {}' \
@@ -56,15 +52,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ~='cd ~'
 
-# alias l='ls -lh'
-# alias ll='ls -lha'
-# alias la='ls -A'
-
-alias ga='git add .'
-alias gs='git status'
-alias gc='git commit -m'
-alias gp='git push'
-
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -73,7 +60,6 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-
 
 # bun completions
 [ -s "/home/richi/.bun/_bun" ] && source "/home/richi/.bun/_bun"
