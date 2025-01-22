@@ -1,7 +1,7 @@
 
 # .dotfiles
 *heavily catppuccin inspired*
-* hyprland (stripped down configs of JaKooLit)
+* hyprland (stripped down configs of [JaKooLit](https://github.com/JaKooLit))
 * nvim (lazyvim)
 * rofi
 * waybar
