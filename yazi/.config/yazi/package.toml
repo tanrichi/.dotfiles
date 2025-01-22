@@ -1,0 +1,5 @@
+[plugin]
+deps = [{ use = "ahkohd/eza-preview", rev = "5ef05bc" }, { use = "Reledia/glow", rev = "5ce76dc" }, { use = "boydaihungst/mediainfo", rev = "ddfd5ec" }, { use = "h-hg/yamb", rev = "108347b" }, { use = "yazi-rs/plugins:jump-to-char", rev = "71c4fc2" }, { use = "KKV9/compress", rev = "60b24af" }, { use = "yazi-rs/plugins:full-border", rev = "71c4fc2" }, { use = "yazi-rs/plugins:diff", rev = "71c4fc2" }, { use = "pirafrank/what-size", rev = "b23e3a4" }, { use = "yazi-rs/plugins:smart-enter", rev = "7707c09" }, { use = "yazi-rs/plugins:max-preview", rev = "7707c09" }]
+
+[flavor]
+deps = [{ use = "yazi-rs/flavors:catppuccin-macchiato", rev = "fc8eeaa" }, { use = "yazi-rs/flavors:catppuccin-mocha", rev = "fc8eeaa" }]

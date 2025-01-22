@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+
+<xkbConfigRegistry version="1.1">
+  <layoutList>
+    <layout>
+      <configItem>
+        <name>usdvorak</name>
+        <shortDescription>English (+dvorak)</shortDescription>
+        <description>English (US) with Dvorak symbols</description>
+        <countryList>
+          <iso639Id>US</iso639Id>
+        </countryList>
+        <languageList>
+          <iso639Id>eng</iso639Id>
+        </languageList>
+      </configItem>
+      <variantList/>
+    </layout>
+  </layoutList>
+</xkbConfigRegistry>

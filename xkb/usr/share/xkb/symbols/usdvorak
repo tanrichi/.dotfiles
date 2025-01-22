@@ -1,0 +1,32 @@
+// vim:syntax=xkb
+xkb_symbols "basic" {
+    // Contents of original us(euro)
+    include "us(basic)"
+    name[Group1]= "US English (Dvorak Symbols)";
+    
+    key <AE01>	{[	 1, underscore  ]};
+    key <AE02>	{[	 2, dollar  ]};
+    key <AE03>	{[	 3, bracketleft	]};
+    key <AE04>	{[	 4, braceleft	]};
+    key <AE05>	{[	 5, parenleft	]};
+    key <AE06>	{[	 6, ampersand	]};
+    key <AE07>	{[	 7, parenright ]};
+    key <AE08>	{[	 8, braceright	]};
+    key <AE09>	{[	 9, bracketright	]};
+    key <AE10>	{[	 0, asterisk  ]};
+    key <AE11>	{[   percent,	 numbersign	]};
+    key <AE12>	{[   equal,	 exclam		]};
+
+    key <AD11>	{[   less,	 at	]};
+    key <AD12>	{[   greater, asciicircum	]};
+
+    key <AB08>	{[   comma,	 minus		]};
+    key <AB09>	{[   period,	 plus ]};
+
+    key <RALT>	{[   asciitilde,	 grave ]};
+    key <DELE>	{[   Prior  ]};
+    key <PGUP>	{[   Next ]};
+    key <PGDN>	{[   Delete ]};
+    key <CAPS>  {[   Home  ]};
+};
+

@@ -1,0 +1,19 @@
+[[plugin.prepend_previewers]]
+name = "*/"
+run = "eza-preview"
+
+[[plugin.prepend_previewers]]
+name = "*.md"
+run = "glow"
+
+[preview]
+max_width = 2560
+max_height = 1440
+
+# [[plugin.prepend_previewers]]
+# mime = "{image,audio,video}/*"
+# run = "mediainfo"
+#
+# [[plugin.prepend_previewers]]
+# mime = "application/subrip"
+# run = "mediainfo"

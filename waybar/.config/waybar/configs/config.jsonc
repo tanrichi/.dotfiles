@@ -1,0 +1,34 @@
+{
+  "include": [
+    "$HOME/.config/waybar/Modules",
+    "$HOME/.config/waybar/modules.jsonc",
+    "$HOME/.config/waybar/ModulesCustom",
+    "$HOME/.config/waybar/ModulesGroups",
+  ],
+  "layer": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "fixed-center": true,
+  "ipc": true,
+  "reload_style_on_change": true,
+
+  "modules-left": [
+    "hyprland/workspaces#custom",
+    // "hyprland/workspaces",
+    "tray",
+    "custom/weather",
+  ],
+
+  "modules-center": [
+    "clock",
+  ], 
+
+  "modules-right": [
+    "custom/keyboard",
+    "group/mobo_drawer",
+    "group/audio",
+    "group/status",
+  ],
+}
+

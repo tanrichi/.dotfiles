@@ -1,0 +1,38 @@
+{
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace r+1",
+    "on-scroll-down": "hyprctl dispatch workspace r-1",
+
+    "format": "{windows}",
+
+    "format-window-separator": " ",
+    "window-rewrite-default": " ",
+    "window-rewrite": {
+      "class<zen-alpha>": " ",
+      "class<Slack>": " ",
+      "class<org.wezfurlong.wezterm>": " ",
+      "class<teams-for-linux>": "󰊻 ",
+      "class<vesktop>": "󰙯 ",
+      "class<Google-chrome>": " ",
+      "class<psst-gui>": " ",
+    },
+  },
+  "hyprland/workspaces#custom": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "active": "",
+    },
+  },
+  "custom/weather": {
+    "format": "{}",
+    "format-alt": "{alt}: {}",
+    "format-alt-click": "click",
+    "interval": 3600,
+    "return-type": "json",
+    "exec": "$HOME/.config/hypr/UserScripts/Weather.sh",
+    //"exec": "$HOME/.config/hypr/UserScripts/Weather.py",
+    "exec-if": "ping wttr.in -c1",
+    "tooltip": true,
+  },
+}
