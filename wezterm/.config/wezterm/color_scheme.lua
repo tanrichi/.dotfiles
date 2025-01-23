@@ -1,8 +1,9 @@
 local color_scheme
 
+color_scheme = "tokyonight_night"
+
 -- Tokyo night
 -- color_scheme = "Tokyo Night Moon"
-color_scheme = "Tokyo Night"
 
 -- Rose Pine
 -- color_scheme = "rose-pine-moon"

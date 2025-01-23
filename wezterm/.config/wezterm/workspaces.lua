@@ -14,6 +14,7 @@ function workspaces.start_workspaces()
 		end
 
 		local home_dir = wezterm.home_dir
+		-- local config_dir = home_dir .. "/.config"
 
 		local workingDirectories = {
 			{

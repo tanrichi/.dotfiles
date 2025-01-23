@@ -1,5 +1,7 @@
 local wezterm = require("wezterm")
 
+local theme_switcher = require("theme_switcher")
+
 local keymaps = {}
 local act = wezterm.action
 keymaps.leader = { key = "Home", mods = "", timeout_milliseconds = 1000 }
@@ -59,12 +61,9 @@ keymaps.keys = {
 	{
 		key = "3",
 		mods = "CTRL",
-		action = act.SwitchToWorkspace({
-			name = "Config",
-			spawn = {
-				cwd = wezterm.home_dir .. "/.config",
-			},
-		}),
+		action = wezterm.action_callback(function(window, pane)
+			theme_switcher.theme_switcher(window, pane)
+		end),
 	},
 }
 

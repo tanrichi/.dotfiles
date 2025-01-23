@@ -8,7 +8,7 @@ local workspaces = require("workspaces")
 workspaces.start_workspaces()
 
 -- Color schemes
-local color_scheme = require("colorscheme")
+local color_scheme = require("color_scheme")
 config.color_scheme = color_scheme
 
 -- Core configs
