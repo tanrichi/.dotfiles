@@ -70,3 +70,21 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 [ -f "/home/richi/.ghcup/env" ] && . "/home/richi/.ghcup/env" # ghcup-env
 export PATH=$PATH:/home/richi/.spicetify
+
+# pnpm
+export PNPM_HOME="/home/richi/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
