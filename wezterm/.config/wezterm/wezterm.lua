@@ -3,8 +3,13 @@ local config = {}
 
 config = wezterm.config_builder()
 
+-- Init Workspaces
 local workspaces = require("workspaces")
 workspaces.start_workspaces()
+
+-- Color schemes
+local color_scheme = require("colorscheme")
+config.color_scheme = color_scheme
 
 -- Core configs
 local core = require("core")
