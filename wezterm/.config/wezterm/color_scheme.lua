@@ -1,6 +1,6 @@
 local color_scheme
 
-color_scheme = "tokyonight_night"
+color_scheme = "Catppuccin Mocha"
 
 -- Tokyo night
 -- color_scheme = "Tokyo Night Moon"
