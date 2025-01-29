@@ -9,6 +9,7 @@ run = "glow"
 [preview]
 max_width = 2560
 max_height = 1440
+wrap = "yes"
 
 # [[plugin.prepend_previewers]]
 # mime = "{image,audio,video}/*"
