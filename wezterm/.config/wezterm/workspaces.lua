@@ -22,7 +22,7 @@ function workspaces.start_workspaces()
 				dir = home_dir,
 				tabs = {
 					tabOne = {
-						"y\n",
+						"y",
 					},
 				},
 			},
