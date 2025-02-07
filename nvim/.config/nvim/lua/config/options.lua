@@ -3,6 +3,7 @@
 -- Add any additional options here
 -- vim.g.lazyvim_eslint_auto_format = true
 
+-- vim.g.lazyvim_picker = "snacks"
 vim.g.maplocalleader = ","
 vim.opt.scrolloff = 25
 
