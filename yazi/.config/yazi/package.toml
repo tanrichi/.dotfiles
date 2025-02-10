@@ -1,5 +1,64 @@
-[plugin]
-deps = [{ use = "ahkohd/eza-preview", rev = "5ef05bc" }, { use = "Reledia/glow", rev = "5ce76dc" }, { use = "boydaihungst/mediainfo", rev = "ddfd5ec" }, { use = "h-hg/yamb", rev = "108347b" }, { use = "yazi-rs/plugins:jump-to-char", rev = "71c4fc2" }, { use = "KKV9/compress", rev = "60b24af" }, { use = "yazi-rs/plugins:full-border", rev = "71c4fc2" }, { use = "yazi-rs/plugins:diff", rev = "71c4fc2" }, { use = "pirafrank/what-size", rev = "b23e3a4" }, { use = "yazi-rs/plugins:smart-enter", rev = "7707c09" }, { use = "yazi-rs/plugins:max-preview", rev = "7707c09" }]
+[[plugin.deps]]
+use = "ahkohd/eza-preview"
+rev = "5ef05bc"
+hash = "72355a6c8b7c8de6ed4dda0f98f86fee"
 
-[flavor]
-deps = [{ use = "yazi-rs/flavors:catppuccin-macchiato", rev = "fc8eeaa" }, { use = "yazi-rs/flavors:catppuccin-mocha", rev = "fc8eeaa" }]
+[[plugin.deps]]
+use = "Reledia/glow"
+rev = "5ce76dc"
+hash = "52e5f5c602962e7cbf874da28f52ba45"
+
+[[plugin.deps]]
+use = "boydaihungst/mediainfo"
+rev = "ddfd5ec"
+hash = "30f1eb92543be9624503cb79d03dbd19"
+
+[[plugin.deps]]
+use = "h-hg/yamb"
+rev = "108347b"
+hash = "faf1b817347b5b46c96039dab538694b"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:jump-to-char"
+rev = "71c4fc2"
+hash = "72c66a0b3d60f8377eb9db5e1d8b60b2"
+
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "60b24af"
+hash = "ee025be766240cc98e671754ac836da3"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "71c4fc2"
+hash = "a61bb2d21a08bf1d18f0a549e5eb1475"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:diff"
+rev = "71c4fc2"
+hash = "284f6694e3b1a4afd686acf1052acd90"
+
+[[plugin.deps]]
+use = "pirafrank/what-size"
+rev = "b23e3a4"
+hash = "98e5f5af3efd3ba8bc2db0720187cc83"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "7707c09"
+hash = ""
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:max-preview"
+rev = "7707c09"
+hash = "9bc26d10d2f6e2aa93b10905b1b76979"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-macchiato"
+rev = "fc8eeaa"
+hash = ""
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "fc8eeaa"
+hash = "407710c2af9621a8351453e637d6c870"
