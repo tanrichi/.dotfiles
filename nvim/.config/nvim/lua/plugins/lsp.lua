@@ -5,7 +5,6 @@ return {
 			enabled = false,
 		},
 		servers = {
-			volar = {},
 			hyprls = {},
 			ts_ls = {
 				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
@@ -20,7 +19,8 @@ return {
 					},
 				},
 			},
-			-- vtsls = false,
+			volar = {},
+			vtsls = false,
 		},
 	},
 }

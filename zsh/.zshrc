@@ -88,3 +88,12 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+function fcd() {
+  local dir
+  dir=$(sed "s|\$HOME|$HOME|g" ~/fzf-bookmarks | fzf)
+  [[ -n "$dir" ]] && cd "$dir"
+}
+
+# Bind Alt-G
+bindkey -s '\eg' 'fcd\n'
