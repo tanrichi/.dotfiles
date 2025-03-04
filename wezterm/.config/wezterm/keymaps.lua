@@ -18,32 +18,24 @@ keymaps.keys = {
 	},
 	{
 		mods = "ALT",
-		key = "b",
-		action = act.ActivateTabRelative(-1),
+		key = "q",
+		action = act.CloseCurrentPane({ confirm = true }),
 	},
 	{
-		mods = "ALT",
-		key = "n",
-		action = act.ActivateTabRelative(1),
+		mods = "ALT|SHIFT",
+		key = "q",
+		action = act.CloseCurrentPane({ confirm = false }),
 	},
 	{
-		mods = "ALT",
-		key = "l",
-		action = act.ShowLauncher,
-	},
-	{
-		key = "l",
+		key = "d",
 		mods = "LEADER",
-		action = act.ShowLauncherArgs({
-			flags = "FUZZY|WORKSPACES",
-		}),
+		action = act.SendKey({ key = "g", mods = "ALT" }),
 	},
 	{
 		key = "f",
 		mods = "LEADER",
 		action = act.SendString("y\n"),
 	},
-	-- Workspaces
 	{
 		key = "1",
 		mods = "CTRL",
@@ -52,17 +44,23 @@ keymaps.keys = {
 		}),
 	},
 	{
-		key = "2",
-		mods = "CTRL",
-		action = act.SwitchToWorkspace({
-			name = "WE",
-		}),
+		key = "Space",
+		mods = "LEADER",
+		action = act.SendKey({ key = "g", mods = "ALT" }),
 	},
 	{
 		key = "3",
 		mods = "CTRL",
 		action = wezterm.action_callback(function(window, pane)
 			theme_switcher.theme_switcher(window, pane)
+		end),
+	},
+
+	{
+		mods = "ALT",
+		key = "l",
+		action = wezterm.action_callback(function(win, pane)
+			wezterm.run_child_process({ "ls", "-l" })
 		end),
 	},
 }

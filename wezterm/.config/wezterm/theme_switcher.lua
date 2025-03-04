@@ -5,7 +5,6 @@ local act = wezterm.action
 local M = {}
 
 M.theme_switcher = function(window, pane)
-	-- get builting color schemes
 	local schemes = wezterm.get_builtin_color_schemes()
 	local choices = {}
 
@@ -27,8 +26,6 @@ M.theme_switcher = function(window, pane)
 			choices = choices,
 			fuzzy = true,
 
-			-- execute 'sed' shell command to replace the line
-			-- responsible of colorscheme in my config
 			action = wezterm.action_callback(function(inner_window, inner_pane, _, label)
 				inner_window:perform_action(
 					act.SpawnCommandInNewTab({

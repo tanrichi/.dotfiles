@@ -5,9 +5,10 @@ ZSH_THEME="xiong-chiamiov-plus"
 plugins=(
     git
     archlinux
+    fzf
+    fzf-tab
     zsh-autosuggestions
     zsh-syntax-highlighting
-    fzf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -37,29 +38,25 @@ source <(fzf --zsh)
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+
 setopt appendhistory
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+alias ls='eza -a --icons'
+alias ll='eza -al --icons'
+alias lt='eza -a --tree --level=1 --icons'
 
 alias nv='nvim'
 alias n='nvim'
 
 alias ..='cd ..'
-alias ...='cd ../..'
 alias ~='cd ~'
-
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
+alias -='cd -'
 
 # bun completions
 [ -s "/home/richi/.bun/_bun" ] && source "/home/richi/.bun/_bun"
@@ -73,6 +70,7 @@ export PATH=$PATH:/home/richi/.spicetify
 
 # pnpm
 export PNPM_HOME="/home/richi/.local/share/pnpm"
+
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -89,11 +87,35 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+function y() {
+
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+
+	yazi "$@" --cwd-file="$tmp"
+
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+  zle reset-prompt  # Refresh the prompt after exiting Yazi
+}
+
+
+function open_nvim() {
+  "$HOME/open_test.sh"
+  zle reset-prompt  # Refresh the prompt after changing directories
+}
+
+zle -N y
+zle -N open_nvim
+
 function fcd() {
   local dir
   dir=$(sed "s|\$HOME|$HOME|g" ~/fzf-bookmarks | fzf)
   [[ -n "$dir" ]] && cd "$dir"
+  zle reset-prompt  # Refresh the prompt after changing directories
 }
 
-# Bind Alt-G
-bindkey -s '\eg' 'fcd\n'
+zle -N fcd
+bindkey '\eg' fcd
+bindkey '\en' open_nvim

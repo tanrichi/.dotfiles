@@ -1,17 +1,5 @@
+local wezterm = require("wezterm")
 local core = {}
-
--- Tokyo night
--- core.color_scheme = "Tokyo Night Moon"
--- core.color_scheme = "Tokyo Night"
-
--- Rose Pine
--- core.color_scheme = "rose-pine-moon"
-
--- Catppuccin
--- core.color_scheme = "catppuccin-macchiato"
--- core.color_scheme = "catppuccin-mocha"
--- core.color_scheme = "Catppuccin Macchiato"
--- core.color_scheme = "Catppuccin Mocha"
 
 -- Cursor
 core.default_cursor_style = "BlinkingBar"
@@ -24,7 +12,7 @@ core.use_fancy_tab_bar = false
 core.tab_and_split_indices_are_zero_based = false
 
 -- Performance
-core.animation_fps = 144
-core.max_fps = 144
+core.animation_fps = 240
+core.max_fps = 240
 
 return core
