@@ -27,6 +27,11 @@ keymaps.keys = {
 		action = act.CloseCurrentPane({ confirm = false }),
 	},
 	{
+		mods = "ALT",
+		key = "t",
+		action = act({ SpawnTab = "CurrentPaneDomain" }),
+	},
+	{
 		key = "d",
 		mods = "LEADER",
 		action = act.SendKey({ key = "g", mods = "ALT" }),
