@@ -7,34 +7,34 @@ local act = wezterm.action
 keymaps.leader = { key = "Home", mods = "", timeout_milliseconds = 1000 }
 keymaps.keys = {
 	{
-		mods = "ALT",
+		mods = "CTRL",
 		key = "w",
 		action = act.CloseCurrentPane({ confirm = true }),
 	},
 	{
-		mods = "ALT|SHIFT",
+		mods = "CTRL|SHIFT",
 		key = "w",
 		action = act.CloseCurrentPane({ confirm = false }),
 	},
+	-- {
+	-- 	mods = "CTRL",
+	-- 	key = "q",
+	-- 	action = act.CloseCurrentPane({ confirm = true }),
+	-- },
 	{
-		mods = "ALT",
-		key = "q",
-		action = act.CloseCurrentPane({ confirm = true }),
-	},
-	{
-		mods = "ALT|SHIFT",
+		mods = "CTRL|SHIFT",
 		key = "q",
 		action = act.CloseCurrentPane({ confirm = false }),
 	},
 	{
-		mods = "ALT",
+		mods = "CTRL",
 		key = "t",
 		action = act({ SpawnTab = "CurrentPaneDomain" }),
 	},
 	{
 		key = "d",
 		mods = "LEADER",
-		action = act.SendKey({ key = "g", mods = "ALT" }),
+		action = act.SendKey({ key = "g", mods = "CTRL" }),
 	},
 	{
 		key = "f",
@@ -51,7 +51,7 @@ keymaps.keys = {
 	{
 		key = "Space",
 		mods = "LEADER",
-		action = act.SendKey({ key = "g", mods = "ALT" }),
+		action = act.SendKey({ key = "g", mods = "CTRL" }),
 	},
 	{
 		key = "3",
@@ -62,7 +62,7 @@ keymaps.keys = {
 	},
 
 	{
-		mods = "ALT",
+		mods = "CTRL",
 		key = "l",
 		action = wezterm.action_callback(function(win, pane)
 			wezterm.run_child_process({ "ls", "-l" })
@@ -73,7 +73,7 @@ keymaps.keys = {
 for i = 1, 9 do
 	table.insert(keymaps.keys, {
 		key = tostring(i),
-		mods = "ALT",
+		mods = "CTRL",
 		action = act.ActivateTab(i - 1),
 	})
 end
