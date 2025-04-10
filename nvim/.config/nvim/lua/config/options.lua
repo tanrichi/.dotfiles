@@ -1,2 +1,2 @@
 vim.g.maplocalleader = ","
-vim.opt.scrolloff = 25
+-- vim.opt.scrolloff = 25
