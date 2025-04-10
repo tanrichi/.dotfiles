@@ -1,64 +1,59 @@
 [[plugin.deps]]
 use = "ahkohd/eza-preview"
-rev = "5ef05bc"
+rev = "6575a9a"
 hash = "72355a6c8b7c8de6ed4dda0f98f86fee"
 
 [[plugin.deps]]
 use = "Reledia/glow"
-rev = "5ce76dc"
-hash = "52e5f5c602962e7cbf874da28f52ba45"
+rev = "c76bf4f"
+hash = "a6b78bf9af5390e3a85a6951fbb7b93"
 
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
-rev = "ddfd5ec"
-hash = "30f1eb92543be9624503cb79d03dbd19"
+rev = "436cb5f"
+hash = "144c0ac7a449fcab4e78e942eb41702c"
 
 [[plugin.deps]]
 use = "h-hg/yamb"
-rev = "108347b"
-hash = "faf1b817347b5b46c96039dab538694b"
+rev = "22af003"
+hash = "7cc42012a7c2099f80064d228feb8d44"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:jump-to-char"
-rev = "71c4fc2"
-hash = "72c66a0b3d60f8377eb9db5e1d8b60b2"
-
-[[plugin.deps]]
-use = "KKV9/compress"
-rev = "60b24af"
-hash = "ee025be766240cc98e671754ac836da3"
+rev = "a1738e8"
+hash = "a670c03eb3760812e044a24f94cedc55"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "71c4fc2"
-hash = "a61bb2d21a08bf1d18f0a549e5eb1475"
+rev = "a1738e8"
+hash = "1f3dad061209081a6b04dd6ff2cb06c7"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:diff"
-rev = "71c4fc2"
-hash = "284f6694e3b1a4afd686acf1052acd90"
+rev = "a1738e8"
+hash = "7a08e303167d5b655c06da6d570f0333"
 
 [[plugin.deps]]
 use = "pirafrank/what-size"
-rev = "b23e3a4"
-hash = "98e5f5af3efd3ba8bc2db0720187cc83"
+rev = "f1c6b69"
+hash = "6e789212eb41d937bab04877ca361099"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "7707c09"
-hash = ""
+rev = "a1738e8"
+hash = "7918aab6a71caf31b58411f789195677"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:max-preview"
-rev = "7707c09"
-hash = "9bc26d10d2f6e2aa93b10905b1b76979"
+rev = "a1738e8"
+hash = "a8025f2bb311e869069364fba01abffc"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-macchiato"
-rev = "fc8eeaa"
-hash = ""
+rev = "68326b4"
+hash = "3ec21bcfd2735cfcbab61faaf43e59e4"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "fc8eeaa"
-hash = "407710c2af9621a8351453e637d6c870"
+rev = "68326b4"
+hash = "2ac87e1b3a61f5887472899e86535d29"

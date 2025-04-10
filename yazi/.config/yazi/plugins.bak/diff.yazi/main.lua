@@ -1,5 +1,3 @@
---- @since 25.2.7
-
 local function info(content)
 	return ya.notify {
 		title = "Diff",
