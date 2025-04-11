@@ -16,5 +16,5 @@
 
   "modules-center": ["clock"],
 
-  "modules-right": ["custom/keyboard", "group/mobo_drawer", "group/status"],
+  "modules-right": ["group/mobo_drawer", "group/status"],
 }
