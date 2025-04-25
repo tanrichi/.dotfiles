@@ -6,25 +6,28 @@ return {
       menu = {
         width = vim.api.nvim_win_get_width(0) - 4,
       },
+      settings = {
+        save_on_toggle = true,
+      },
     },
     keys = function()
       local keys = {
         {
-          "<leader>a",
+          "<leader>ha",
           function()
             require("harpoon"):list():add()
           end,
           desc = "Harpoon File",
         },
         {
-          "<leader>A",
+          "<leader>hc",
           function()
             require("harpoon"):list():clear()
           end,
           desc = "Harpoon Clear",
         },
         {
-          "<leader>h",
+          "<leader>he",
           function()
             local harpoon = require("harpoon")
             harpoon.ui:toggle_quick_menu(harpoon:list())
