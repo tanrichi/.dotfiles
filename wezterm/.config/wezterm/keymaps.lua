@@ -9,11 +9,6 @@ keymaps.keys = {
 	{
 		mods = "CTRL",
 		key = "w",
-		action = act.CloseCurrentPane({ confirm = true }),
-	},
-	{
-		mods = "CTRL|SHIFT",
-		key = "w",
 		action = act.CloseCurrentPane({ confirm = false }),
 	},
 	-- {
@@ -53,21 +48,21 @@ keymaps.keys = {
 		mods = "LEADER",
 		action = act.SendKey({ key = "g", mods = "CTRL" }),
 	},
-	{
-		key = "3",
-		mods = "CTRL",
-		action = wezterm.action_callback(function(window, pane)
-			theme_switcher.theme_switcher(window, pane)
-		end),
-	},
 
-	{
-		mods = "CTRL",
-		key = "l",
-		action = wezterm.action_callback(function(win, pane)
-			wezterm.run_child_process({ "ls", "-l" })
-		end),
-	},
+	-- {
+	-- 	key = "3",
+	-- 	mods = "CTRL",
+	-- 	action = wezterm.action_callback(function(window, pane)
+	-- 		theme_switcher.theme_switcher(window, pane)
+	-- 	end),
+	-- },
+	-- {
+	-- 	mods = "CTRL",
+	-- 	key = "l",
+	-- 	action = wezterm.action_callback(function(win, pane)
+	-- 		wezterm.run_child_process({ "ls", "-l" })
+	-- 	end),
+	-- },
 }
 
 for i = 1, 9 do
