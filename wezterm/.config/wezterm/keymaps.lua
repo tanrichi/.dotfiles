@@ -4,7 +4,7 @@ local theme_switcher = require("theme_switcher")
 
 local keymaps = {}
 local act = wezterm.action
-keymaps.leader = { key = "Home", mods = "", timeout_milliseconds = 1000 }
+keymaps.leader = { key = "F10", mods = "", timeout_milliseconds = 1000 }
 keymaps.keys = {
 	{
 		mods = "CTRL",
@@ -46,23 +46,10 @@ keymaps.keys = {
 	{
 		key = "Space",
 		mods = "LEADER",
-		action = act.SendKey({ key = "g", mods = "CTRL" }),
+		action = wezterm.action_callback(function(window, pane)
+			theme_switcher.theme_switcher(window, pane)
+		end),
 	},
-
-	-- {
-	-- 	key = "3",
-	-- 	mods = "CTRL",
-	-- 	action = wezterm.action_callback(function(window, pane)
-	-- 		theme_switcher.theme_switcher(window, pane)
-	-- 	end),
-	-- },
-	-- {
-	-- 	mods = "CTRL",
-	-- 	key = "l",
-	-- 	action = wezterm.action_callback(function(win, pane)
-	-- 		wezterm.run_child_process({ "ls", "-l" })
-	-- 	end),
-	-- },
 }
 
 for i = 1, 9 do
