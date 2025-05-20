@@ -11,3 +11,9 @@
 local esc = vim.api.nvim_replace_termcodes("<Esc>", true, true, true)
 
 vim.fn.setreg("l", "viwyoconsole.log('" .. esc .. "pa: " .. esc .. "la, " .. esc .. "pl")
+
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    vim.diagnostic.open_float(nil, { focusable = false, source = "if_many" })
+  end,
+})

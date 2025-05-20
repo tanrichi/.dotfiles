@@ -31,3 +31,6 @@ keymap.set("v", ">", ">gv")
 
 -- LSP
 keymap.set("n", "<leader>rr", "<cmd>LspRestart<CR>", { desc = "Restart LSP server" })
+
+-- Duplicate line and comment the first line
+keymap.set("n", "ycc", "yygccp", { remap = true })
